@@ -22,8 +22,11 @@ from . import views
 movie_resource = api.models.MovieResource()
 
 urlpatterns = [
-    path('', views.home),
+    # path('', views.home),
+    path('', views.showlist, name='showlist'),
     path('admin/', admin.site.urls),
     path('movies/', include('movies.urls')),
-    path('api/', include(movie_resource.urls))
+    path('api/', include(movie_resource.urls)),
+    # path('movies/', include('movies.urls'), views.showlist, name='showlist')
+
 ]

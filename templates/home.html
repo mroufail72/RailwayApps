@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <a href="{% url 'movies:index' %}">Movies</a>
+<p>Enter your Movie:</p>
+    <input type="text" list="movielist" Placeholder="Search Movie.." class="form-control" style="width:400px;">
+    <datalist id="movielist">
+ {% for results in showmovie %}
+        <option value="{{ results.title}}">
+ {% endfor %}
+    </datalist>
+<br></br>
+    <p><a href="{% url 'movies:index' %}">Movies</a></p>
 {% endblock %}

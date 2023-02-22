@@ -21,3 +21,14 @@ class Movie(models.Model):
     daily_rate = models.FloatField()
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
     date_created = models.DateTimeField(default=timezone.now)
+
+
+class MovieList(models.Model):
+    title = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        managed = False
+        db_table = 'movies_movie'
