@@ -30,3 +30,7 @@ urlpatterns = [
     # path('movies/', include('movies.urls'), views.showlist, name='showlist')
 
 ]
+
+admin.site.site_header = "Vidly Admin"
+admin.site.site_title = "Vidly Admin Portal"
+admin.site.index_title = "Welcome to Vidly Portal"
