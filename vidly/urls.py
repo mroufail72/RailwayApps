@@ -18,6 +18,7 @@ from django.urls import path, include
 # from api.models import MovieResource
 import api.models
 from . import views
+from django.views.decorators.csrf import csrf_exempt
 
 movie_resource = api.models.MovieResource()
 
@@ -27,8 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('movies/', include('movies.urls')),
     path('api/', include(movie_resource.urls)),
-    # path('movies/', include('movies.urls'), views.showlist, name='showlist')
-
+    # path('text', csrf_exempt(views.export_complete), name='export_complete')
 ]
 
 admin.site.site_header = "Vidly Admin"

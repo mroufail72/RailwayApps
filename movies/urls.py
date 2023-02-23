@@ -16,4 +16,6 @@ app_name = 'movies'  # add this so we don't have to add "movies_" prefix in code
 urlpatterns = [
     path('', views.index, name='index'),  # root
     path('<int:movie_id>', views.detail, name='detail'),  # root
+    path('export', views.expProd, name='export')
+
 ]

@@ -9,6 +9,8 @@ pylint-django = "*"
 django-tastypie = "*"
 gunicorn = "*"
 whitenoise = "*"
+pandas = "*"
+flask = "*"
 
 [dev-packages]
 
