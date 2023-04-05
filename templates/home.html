@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>Enter your Movie:</p>
+{% comment %} <p>Enter your Movie:</p>
     <input type="text" list="movielist" Placeholder="Search Movie.." class="form-control" style="width:400px;">
     <datalist id="movielist">
  {% for results in showmovie %}
@@ -9,8 +9,15 @@
  {% endfor %}
     </datalist>
 <br></br>
-    <p><a href="{% url 'movies:index' %}">Movies</a></p>
+    <p><a href="{% url 'movies:index' %}">Movies</a></p>{% endcomment %}
 
-    <iframe title="Report Section" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYTZmOThmYjktYWYxZC00OGU3LWFjZDMtMmU5NzE3MTgyODYxIiwidCI6IjZjYTQ1YWYxLTViMTMtNDNlNi05OWI2LTJlZDRjYTcyNzRiNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+<p>Sales Report Example 1:</p>
+
+    <iframe title="Sales_Report_CourseTraining" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYTZmOThmYjktYWYxZC00OGU3LWFjZDMtMmU5NzE3MTgyODYxIiwidCI6IjZjYTQ1YWYxLTViMTMtNDNlNi05OWI2LTJlZDRjYTcyNzRiNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+<p>Sales Report Example 2:</p>
+
+    <iframe title="Report Section" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiODUzZDgxOWEtMWRiNS00MmUzLThjOWQtN2FkNGZiYjE3ZTYwIiwidCI6IjZjYTQ1YWYxLTViMTMtNDNlNi05OWI2LTJlZDRjYTcyNzRiNSJ9" frameborder="0" allowFullScreen="true"></iframe>
+
 
 {% endblock %}
